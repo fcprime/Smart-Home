@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./images/icons/style.css" />
+    <title>Smart Home</title>
+  </head>
+
+  <body>
+    <div class="mobile">
+      <div class="mobile__top">
+        <img src="images/top.svg" alt="icon top" />
+      </div>
+      <div class="mobile__content">
+        <div class="selectbox" id="selectbox">
+          <div class="selectbox__selected">
+            <span>All rooms</span>
+            <i class="ic_arrow"></i>
+          </div>
+          <div class="selectbox__list">
+            <div class="selectbox__item selected" data-room="all">All rooms</div>
+            <div class="selectbox__item" data-room="livingroom">Living Room</div>
+            <div class="selectbox__item" data-room="bedroom">Bedroom</div>
+            <div class="selectbox__item" data-room="kitchen">Kitchen</div>
+            <div class="selectbox__item" data-room="bathroom">Bath Room</div>
+            <div class="selectbox__item" data-room="studio">Studio</div>
+            <div class="selectbox__item" data-room="washingroom">Washing</div>
+          </div>
+        </div>
+        <div class="rooms" id="rooms">
+          <div class="room" data-room="livingroom">
+            <i class="ic_livingroom"></i>
+            <span>Living Room</span>
+          </div>
+          <div class="room" data-room="bedroom">
+            <i class="ic_bedroom"></i>
+            <span>Bedroom</span>
+          </div>
+          <div class="room" data-room="kitchen">
+            <i class="ic_kitchen"></i>
+            <span>Kithen</span>
+          </div>
+          <div class="room" data-room="bathroom">
+            <i class="ic_bathroom"></i>
+            <span>Bath Room</span>
+          </div>
+          <div class="room" data-room="studio">
+            <i class="ic_studio"></i>
+            <span>Studio</span>
+          </div>
+          <div class="room" data-room="washingroom">
+            <i class="ic_washingroom"></i>
+            <span>Washing room</span>
+          </div>
+        </div>
+        <div class="settings" id="settings">
+          <div class="settings__tabs" id="settings-tabs">
+            <div class="tab selected" data-type="temperature">
+              <i class="ic_temperature"></i>
+              <span>Temperature</span>
+            </div>
+            <div class="tab" data-type="lights">
+              <i class="ic_lights"></i>
+              <span>Lights</span>
+            </div>
+            <div class="tab" data-type="humidity">
+              <i class="ic_humidity"></i>
+              <span>Humidity</span>
+            </div>
+          </div>
+          <div class="settings__screens" id="settings-panel">
+            <div class="settings__screen selected" data-type="temperature">
+              <div class="settings__screen-title">Temperature</div>
+              <div class="temperature-button" id="temperature-btn">
+                <svg class="dots-box" viewBox="0 0 103 103">
+                  <circle class="dots" r="50" cx="50%" cy="50%"></circle>
+                  <circle class="line" r="44" cx="50%" cy="50%"></circle>
+                  <circle
+                    id="temperature-line"
+                    class="line-active"
+                    r="44"
+                    cx="50%"
+                    cy="50%"
+                  ></circle>
+                  <circle class="seperate-lines" r="44" cx="50%" cy="50%"></circle>
+                  <circle id="temperature-round" class="round" r="44" cx="50%" cy="50%"></circle>
+                  <circle class="seperate-dots" r="50" cx="50%" cy="50%"></circle>
+                </svg>
+                <div class="temperature-button__info">
+                  <span id="temperature">16</span>
+                  <span>C</span>
+                </div>
+              </div>
+              <div class="power" id="power">
+                <i class="ic_power"></i>
+              </div>
+              <div class="power-label" id="power-label">Click to turn off</div>
+              <buttton class="save-button" id="save-temperature">Set temperature</buttton>
+            </div>
+            <div class="settings__screen" data-type="lights">
+              <div class="settings__screen-title">Lights</div>
+              <div class="settings__screen-icon">
+                <i class="ic_sun"></i>
+              </div>
+              <div class="slider">
+                <div class="slider__progress" id="lights-slider"><span>45</span>%</div>
+              </div>
+              <div class="switch" id="lights-power">
+                <div></div>
+              </div>
+            </div>
+            <div class="settings__screen" data-type="humidity">
+              <div class="settings__screen-title">Lights</div>
+              <div class="settings__screen-icon">
+                <i class="ic_humidity"></i>
+              </div>
+              <div class="slider">
+                <div class="slider__progress" id="humidity-slider"><span>45</span>%</div>
+              </div>
+              <div class="switch" id="humidity-power">
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile__bottom">
+        <img src="images/bottom.svg" alt="icon bottom" />
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
